@@ -1,0 +1,33 @@
+.filters {
+    display: flex;
+    justify-content: space-between;
+    .filter {
+        border: 1px solid #4a4a4a;
+        border-radius: 5px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        &.panel-selection {
+            background: #9b9b9b;
+            color: white;
+            border: 0px;
+            .title {
+                background: transparent;
+                transform: unset;
+            }
+        }
+        .title {
+            align-self: center;
+            padding: 0px 5px;
+            background: white;
+            transform: translateY(-50%);
+        }
+        .filter-group-wrapper {
+            display: flex;
+            align-items: flex-end;
+            .filter-group {
+                flex: 1;
+            }
+        }
+    }
+}
