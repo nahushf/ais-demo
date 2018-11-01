@@ -5,6 +5,8 @@ import Charts from 'echarts-for-react/lib/core';
 import * as echarts from 'echarts/lib/echarts';
 import * as React from 'react';
 import { Filters } from './Components/Filters';
+import { DiamondChart } from './Components/DiamondChart';
+import { CubeScatter } from './Components/CubeScatter';
 
 
 const chartData = [
@@ -84,6 +86,8 @@ class App extends React.Component {
 					option={this.getOption()}
 					echarts={echarts}
 				/>
+				<DiamondChart />
+				<CubeScatter />
 			</div>
 		);
 	}

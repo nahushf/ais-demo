@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './filters.scss';
-import Select from 'react-select';
+import { Select } from './Select';
 
 const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -23,6 +23,14 @@ export class Filters extends React.PureComponent<{}> {
         <div className="filter-group">
             <label>{label}</label>
             {children}
+        </div>
+
+    renderRadioGroup = (label: string) =>
+        <div className="filter-group radio">
+            <label>
+                <input type="radio" />
+                <span>{label}</span>
+            </label>
         </div>
 
     render() {
@@ -74,14 +82,26 @@ export class Filters extends React.PureComponent<{}> {
                 {this.renderFilter(
                     'Panel Selection',
                     <React.Fragment>
-                        {this.renderFilterGroup(
+                        {this.renderRadioGroup(
                             'Continuous Panel',
-                            <input type="radio" />
+                        )}
+                        {this.renderRadioGroup(
+                            'All Panel',
+                        )}
+                        {/* {this.renderFilterGroup(
+                            'Continuous Panel',
+                            <React.Fragment>
+                                <input type="radio" />
+                                <span className="radio" />
+                            </React.Fragment>
                         )}
                         {this.renderFilterGroup(
                             'All Panel',
-                            <input type="radio" />
-                        )}
+                            <React.Fragment>
+                                <input type="radio" />
+                                <span className="radio" />
+                            </React.Fragment>
+                        )} */}
                     </React.Fragment>,
                     'panel-selection'
                 )}

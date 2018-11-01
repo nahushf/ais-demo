@@ -1,22 +1,63 @@
 .filters {
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     .filter {
-        border: 1px solid #4a4a4a;
+        border: 1px solid #d2d2d2;
+        padding-bottom: 15px;
         border-radius: 5px;
+        margin: 0px 10px;
         flex: 1;
         display: flex;
         flex-direction: column;
+        min-width: 257px;
+        &:first-child {
+            margin-left: 20px;
+        }
+        &:last-child {
+            margin-right: 20px;
+        }
         &.panel-selection {
+            padding-top: 15px;
             background: #9b9b9b;
             color: white;
+            flex: 0.8;
             border: 0px;
+            display: flex;
+            justify-content: space-between;
             .title {
                 background: transparent;
                 transform: unset;
             }
+            .filter-group-wrapper {
+                align-items: center;
+                height: 38px;
+                .filter-group {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    label {
+                        width: 100%;
+                    }
+                    input {
+                        display: none;
+                        &+span::before {
+                            display: inline-block;
+                            content: '\f1db';
+                            color: white;
+                            font-family: 'FontAwesome';
+                            font-size: 16px;
+                            padding-right: 5px;
+                        }
+                    }
+                    input:checked+span::before {
+                        font-size: 16px;
+                        content: '\f192';
+                    }
+                }
+            }
         }
         .title {
+            font-weight: bold;
             align-self: center;
             padding: 0px 5px;
             background: white;
@@ -25,8 +66,23 @@
         .filter-group-wrapper {
             display: flex;
             align-items: flex-end;
+            justify-content: center;
             .filter-group {
                 flex: 1;
+                margin: 0px 8px;
+                &.radio {
+                    flex: unset;
+                }
+                &:last-child {
+                    margin-right: 16px;
+                }
+                &:first-child {
+                    margin-left: 16px;
+                }
+                label {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
             }
         }
     }

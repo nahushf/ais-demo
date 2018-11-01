@@ -27,8 +27,7 @@
       0
     ],
     "interface-name": [
-      true,
-      "never-prefix"
+      true
     ],
     "no-empty": [
       false,

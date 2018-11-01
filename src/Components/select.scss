@@ -1,0 +1,15 @@
+.select-dropdown {
+    .select-dropdown__control {
+        border-radius: 25px;
+    }
+    .select-dropdown__dropdown-indicator>div {
+        display: inline-block;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #4a4a4a;
+    }
+    .select-dropdown__placeholder,
+    .select-dropdown__single-value {
+        font-size: 12px;
+    }
+}
