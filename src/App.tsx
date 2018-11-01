@@ -7,6 +7,7 @@ import * as React from 'react';
 import { Filters } from './Components/Filters';
 import { DiamondChart } from './Components/DiamondChart';
 import { CubeScatter } from './Components/CubeScatter';
+import Header from './Components/Header/header';
 
 
 const chartData = [
@@ -81,6 +82,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="app">
+                <Header />
 				<Filters />
 				<Charts
 					option={this.getOption()}
