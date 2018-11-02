@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'echarts/lib/chart/scatter';
 
 import Charts from 'echarts-for-react/lib/core';
@@ -24,11 +24,11 @@ class App extends React.Component {
 				offset: 0,
 			}]),
 			title: {
-				text: 'Bubble chart'
+				text: ''
 			},
 			legend: {
-				right: 10,
-				data: ['1990', '2015']
+				bottom: 10,
+				data: ['1990']
 			},
 			xAxis: {
 				splitLine: {
@@ -82,14 +82,22 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="app">
-                <Header />
-				<Filters />
-				<Charts
-					option={this.getOption()}
-					echarts={echarts}
-				/>
-				<DiamondChart />
-				<CubeScatter />
+				<Header />
+				<div className="page-container">
+					<Filters />
+					<div className="charts-container">
+						<div className="chart-row">
+							<Charts
+								option={this.getOption()}
+								echarts={echarts}
+							/>
+						</div>
+						<div className="chart-row">
+							<DiamondChart />
+							<CubeScatter />
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}

@@ -25,8 +25,8 @@ export class DiamondChart extends React.PureComponent<{}> {
                         { text: 'Segment 3', max: 100 },
                         { text: 'Segment 4', max: 100 }
                     ],
-                    center: ['25%', '40%'],
-                    radius: 80,
+                    center: ['50%', '50%'],
+                    radius: 180,
                     splitArea: {
                         show: false
                     },
@@ -80,6 +80,7 @@ export class DiamondChart extends React.PureComponent<{}> {
     render() {
         return (
             <Charts
+                style={{ height: '500px' }}
                 option={this.getOption()}
                 echarts={echarts}
             />

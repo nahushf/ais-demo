@@ -32,7 +32,7 @@ export class CubeScatter extends React.PureComponent<ICubeScatterProps, ICubeSca
             grid3D: {
                 splitLine: {
                     lineStyle: {
-                        color: '#444'
+                        color: '#5f5f5f'
                     }
                 },
                 axisLine: {
@@ -86,11 +86,13 @@ export class CubeScatter extends React.PureComponent<ICubeScatterProps, ICubeSca
 
     render() {
         return (
-            <Charts
-                style={{ height: '500px', background: '#333' }}
-                option={this.getOption()}
-                echarts={echarts}
-            />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '500px', flex: 1, background: '#4a4a4a', borderRadius: '5px' }}>
+                <Charts
+                    style={{ height: '400px', background: '#4a4a4a', borderRadius: '5px' }}
+                    option={this.getOption()}
+                    echarts={echarts}
+                />
+            </div>
         );
     }
 }

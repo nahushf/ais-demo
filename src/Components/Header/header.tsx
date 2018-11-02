@@ -9,20 +9,19 @@ const Header = () => {
             background: 'linear-gradient(to left, rgb(21, 113, 192) 24%,rgb(48, 203, 153) 68%)',
             lineHeight: '36px',
             color: '#fff',
-            fontFamily: 'monospace',
             fontSize: 20,
-            fontWeight: 600
         },
         image: {
             marginRight: 10
         },
         icon: {
-            fontSize: 35
+            fontSize: 24,
+            padding: '0 15px'
         }
     }
     return (
         <div style={style.nav}>
-            <span className="logo">AISensum</span>
+            <span className="logo" style={{ fontWeight: 'bold' }}>AiSensum Report</span>
             <span>Customer Profile</span>
             <div className="links-container">
                 <div className="links">
