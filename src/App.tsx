@@ -84,6 +84,7 @@ class App extends React.Component {
 			<div className="app">
 				<Header />
 				<div className="page-container">
+					<div className="page-title">Customer Profile</div>
 					<Filters />
 					<div className="charts-container">
 						<div className="chart-row">
