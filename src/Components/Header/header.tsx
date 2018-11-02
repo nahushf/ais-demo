@@ -18,7 +18,7 @@ const Header = () => {
             fontSize: 24,
             padding: '0 15px'
         }
-    }
+    };
     return (
         <div style={style.nav}>
             <span className="logo" style={{ fontWeight: 'bold' }}>AiSensum Report</span>
@@ -31,6 +31,6 @@ const Header = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 };
 export default Header;
