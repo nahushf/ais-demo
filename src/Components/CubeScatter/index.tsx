@@ -46,7 +46,7 @@ export class CubeScatter extends React.PureComponent<ICubeScatterProps, ICubeSca
                     }
                 },
                 viewControl: {
-                    zoomSensitivity: 0,
+                    // zoomSensitivity: 0,
                 }
             },
             series: [{
